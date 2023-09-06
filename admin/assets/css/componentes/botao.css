@@ -1,0 +1,30 @@
+.botao-simples {
+    border: none;
+    background-color: unset;
+}
+
+
+.botao-simples--adicionar {
+    color: var(--cor-primaria);
+}
+
+.botao-simples--excluir {
+    color: var(--cor-aviso);
+}
+
+.botao-simples--editar {
+    color: var(--cor-sucesso);
+}
+
+.botao__cadastro{
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 32%;
+    align-items: center;
+    padding: 16px 30px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border-radius: 6px;
+}

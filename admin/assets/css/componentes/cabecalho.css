@@ -1,0 +1,30 @@
+@import url(tabela.css);
+
+.cabecalho {
+    background-color: var(--cor-contraste-claro);
+    border-radius: 0 0 10px 10px;
+    box-shadow: var(--sombra);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    margin-bottom: 2rem;
+    justify-content: space-around;
+}
+
+.cabecalho__logo {
+    width: 8rem;
+}
+
+.cabecalho__lista-navegacao{
+    display: flex;
+}
+
+.cabecalho__link {
+    margin-left: 2rem;
+}
+
+nav {
+    display: flex;
+}
+
