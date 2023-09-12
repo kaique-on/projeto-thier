@@ -67,5 +67,6 @@ const atualizaCliente = (id, nome, email) => {
     criarClientes,  
     removeCliente,
     detalhaCliente,
-    atualizaCliente
+    atualizaCliente,
  }
+ 

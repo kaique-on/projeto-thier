@@ -13,8 +13,8 @@
         <a href="./lista_cliente.html"><img class="cabecalho__logo" src="/admin/assets/img/Logo_De_Clínica_De_Veterinária_Pet_Shop_Verde_1_-removebg-preview.png" alt="Logotipo"></a>
         <nav>
             <ul class="cabecalho__lista-navegacao"></ul>
-            <li class="cabecalho__link"><a href="#">Dashboard</a></li>
-            <li class="cabecalho__link"><a href="#">Produtos</a></li>
+            <li class="cabecalho__link"><a href="./lista_cliente.html">Dashboard</a></li>
+            <li class="cabecalho__link"><a href="./lista_produtos.html">Produtos</a></li>
             <li class="cabecalho__link"><a href="./lista_cliente.html">Clientes</a></li>
             <li class="cabecalho__link"><a href="#">Pets</a></li>
         </nav>
@@ -23,7 +23,7 @@
     <main class="container flex flex--centro flex--coluna">
         <section class="cartao cadastro">
             <h1 class="cartao__titulo">Cadastrar um produto</h1>
-            <form class="flex flex--coluna" data-form>
+            <form class="flex flex--coluna" data-form-produto>
     
                     <div class="input-container">
                     <label class="input-label" for="Nome">Nome:</label>
@@ -33,7 +33,7 @@
 
                 <div class="input-container">
                     <label class="input-label" for="preco">Preco:</label>
-                    <input name="preco" id="preco" class="input" type="text" placeholder="Digite o preco" required data-preco>
+                    <input name="preco" id="preco" class="input" type="text" placeholder="Digite o preço" required data-preco>
                     <span class="input-mensagem-erro">Esse campo não pode estar vazio</span>
                 </div>
 
@@ -48,4 +48,5 @@
         </section>
     </main>
 </body>
+<script type="module" src="../controller/cadastraProduto-controller.js"></script>
 </html>

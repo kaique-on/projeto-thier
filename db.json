@@ -15,5 +15,19 @@
       "email": "💀@gmail.com",
       "id": 3
     }
+  ],
+  "produtos": [
+    {
+      "nome": "Davi",
+      "preco": "15",
+      "descricao": "bla bla bla",
+      "id": 0
+    },
+    {
+      "nome": "Kaique",
+      "preco": "10",
+      "descricao": "Produto bom",
+      "id": 1
+    }
   ]
 }

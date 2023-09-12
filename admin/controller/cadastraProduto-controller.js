@@ -1,25 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector("form[data-form]");
+import { produtoService } from "../service/produtos-service.js"
+const formularioProduto = document.querySelector('[data-form-produto]')
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
+// Adicione um ouvinte de evento 'submit' ao formulário.
+formularioProduto.addEventListener('submit', (evento) => {
+    
+        // Previne o comportamento padrão do formulário (como recarregar a página).
+        evento.preventDefault()
 
-        // Obtenha os valores dos campos
-        const nome = document.querySelector("input[data-nome]").value;
-        const preco = document.querySelector("input[data-preco]").value;
-        const descricao = document.querySelector("textarea[data-descricao]").value;
+        // Recupera o valor inserido no campo com o atributo [data-nome].
+       const nome = evento.target.querySelector('[data-nome]').value
 
-        // Crie um objeto JavaScript para representar o produto
-        const produto = {
-            nome: nome,
-            preco: preco,
-            descricao: descricao,
-        };
+       // Recupera o valor inserido no campo com o atributo [data-email].
+       const preço = evento.target.querySelector('[data-preco]').value
 
-        // Converta o objeto em uma string JSON
-        const produtoJSON = JSON.stringify(produto);
+       const descricao = evento.target.querySelector('[data-descricao]').value
 
-        // Aqui você pode fazer o que quiser com a string JSON, como enviá-la para um servidor, armazená-la em um banco de dados, etc.
-        console.log(produtoJSON);
-    });
-});
+       // Usa o serviço clienteService para criar um novo cliente com os valores obtidos.
+       produtoService.criarProdutos(nome, preço, descricao)
+        .then(() => {
+            // Depois de criar o cliente com sucesso, redireciona o usuário para a tela 'cadastro_concluido.html'.
+            window.location.href = '../telas/cadastro_concluido.html'
+        })
+})
