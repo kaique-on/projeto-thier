@@ -35,6 +35,16 @@ const listaProdutos = () => {
     })
  }
 
+const atualizaProduto = (id, preco, descricao, nome) => {
+   return fetch (`http://localhost:3000/produtos/${id}`, {
+      method 'PUT',
+      headers: {'Content-type' : 'application/json'},
+      body: JSON.stringify({
+         nome: none
+      })
+   })
+}
+
 export const produtoService = {
     criarProdutos,
     listaProdutos,
